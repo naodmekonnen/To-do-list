@@ -24,8 +24,16 @@ const handleCount = () =>{
 return(
         <div>
             <li>{text}</li>
-            <input type = 'checkbox' onChange={completedHandler, handleIncrement}></input>
-            <button onClick={deleteHandler}>delete</button>
+            <input type = 'checkbox' onChange ={ () =>{
+                                    completedHandler();
+                                    handleIncrement()
+                                                    }}></input>
+            
+            
+            <button onClick={ () =>{
+                deleteHandler();
+                handleDecrement();
+            }}>delete</button>
         </div>
     )
 }
