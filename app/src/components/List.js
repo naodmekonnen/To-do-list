@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "./Counter";
 
-const TodoList = ({text, todo, setTodo, task})=>{
+const TodoList = ({text, todo, setTodo, task, handleIncrement, handleDecrement})=>{
  
 const deleteHandler = () =>{
     setTodo(todo.filter((item) => item.id !== task.id))
