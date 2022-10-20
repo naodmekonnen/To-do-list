@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./Counter";
 
 const TodoList = ({text, todo, setTodo, task, handleIncrement, handleDecrement})=>{
  
 const deleteHandler = () =>{
     setTodo(todo.filter((item) => item.id !== task.id))
+     
 }
 
 const completedHandler = () => {
@@ -23,13 +23,11 @@ return(
             <input type = 'checkbox' 
             onChange ={ () =>{
             completedHandler();
-            handleIncrement()
             }}></input>
             
             
             <button onClick={ () =>{
             deleteHandler();
-            handleDecrement();
             }}>delete</button>
         </div>
     )

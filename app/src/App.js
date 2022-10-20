@@ -1,6 +1,5 @@
 import Form from './components/Form';
 import Todo from './components/Todo';
-import Counter from './components/Counter';
 import React, {useState, useEffect} from 'react'
 
 
@@ -11,7 +10,6 @@ function App(){
     const [todo, setTodo] = useState([]);
     const [status, setStatus] = useState('all')
     const [filtodo, setFiltodo] = useState([]);
-    const [count, setCount] = useState(0);
 
 useEffect(() =>{
     filterHandler();    
@@ -47,7 +45,6 @@ const filterHandler = () =>{
           />
     
     <Todo  setTodo={setTodo} filtodo={filtodo} todo={todo}/>
-    <Counter count={count} setCount={setCount} />
         </div>
     )
 }
