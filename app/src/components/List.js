@@ -17,22 +17,19 @@ const completedHandler = () => {
     }))
 }
 
-const handleCount = () =>{
-
-}
-
 return(
         <div>
             <li>{text}</li>
-            <input type = 'checkbox' onChange ={ () =>{
-                                    completedHandler();
-                                    handleIncrement()
-                                                    }}></input>
+            <input type = 'checkbox' 
+            onChange ={ () =>{
+            completedHandler();
+            handleIncrement()
+            }}></input>
             
             
             <button onClick={ () =>{
-                deleteHandler();
-                handleDecrement();
+            deleteHandler();
+            handleDecrement();
             }}>delete</button>
         </div>
     )

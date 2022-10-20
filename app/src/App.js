@@ -47,7 +47,7 @@ const filterHandler = () =>{
           />
     
     <Todo  setTodo={setTodo} filtodo={filtodo} todo={todo}/>
-    <Counter />
+    <Counter count={count} setCount={setCount} />
         </div>
     )
 }
