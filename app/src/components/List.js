@@ -19,7 +19,8 @@ const completedHandler = () => {
 return(
         <div>
             <li>{text}</li>
-            <button onClick ={completedHandler}>done</button>
+            <input type = 'checkbox' onChange={completedHandler}></input>
+            {/* <button onClick ={completedHandler}>done</button> */}
             <button onClick={deleteHandler}>delete</button>
         </div>
     )

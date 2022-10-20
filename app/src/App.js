@@ -12,6 +12,7 @@ function App(){
     const [todo, setTodo] = useState([]);
     const [status, setStatus] = useState('all')
     const [filtodo, setFiltodo] = useState([]);
+    const [counter, setCounter] = useState(0);
 
 useEffect(() =>{
     filterHandler();    
