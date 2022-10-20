@@ -78,7 +78,7 @@
 4. this function will be referenced in the onClick function when the delete button is clicked
 5. END
 
-## onChange function
+## onChange function (task input form)
 1. BEGIN
 2. it will listen for a change in the input form
 3. it will grab the value from the DOM (form element)
