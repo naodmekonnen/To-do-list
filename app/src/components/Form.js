@@ -22,7 +22,7 @@ const Form = ({input,setInput,todo,setTodo, setStatus}) =>{
 
 return(
         <>
-        <input value={input} onChange={inputHandler}type='text'></input>
+        <input placeholder='Enter a task' value={input} onChange={inputHandler}type='text'></input>
         <button onClick={submitHandler} type='submit'>submit</button>
         <div>
             <select onChange={statusHandler} name='todo'>

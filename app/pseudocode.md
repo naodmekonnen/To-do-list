@@ -99,6 +99,18 @@
 5. It will use the given parameter and the unique id to identify which list item to delete
 6. END
 
+## submitHandler function
+1. BEGIN
+2. this function will be called when the submit button is clicked after the user submits form data
+3. the form will be cleared when the user clicks submit
+4. the 
+
+## inputHandler
+1. BEGIN
+2. grabs the value from the input form when a user enters a task
+3. the function will set state to allow the user to enter a new task
+(will add more details later)
+4. 
 
 
 
