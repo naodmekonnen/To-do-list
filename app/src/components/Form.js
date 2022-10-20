@@ -8,7 +8,10 @@ const Form = ({input,setInput,todo,setTodo, setStatus}) =>{
 
     const submitHandler = (e) => {
         e.preventDefault();
-        setTodo([...todo,{text: input, completed:false, id: Date.now()}])
+        setTodo([...todo,
+            {text: input, 
+             completed:false, 
+             id: Date.now()}])
 
         setInput('')
     }
