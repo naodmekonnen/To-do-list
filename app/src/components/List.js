@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "./Counter";
 
 const TodoList = ({text, todo, setTodo, task})=>{
  
@@ -16,14 +17,19 @@ const completedHandler = () => {
     }))
 }
 
+const handleCount = () =>{
+
+}
+
 return(
         <div>
             <li>{text}</li>
-            <input type = 'checkbox' onChange={completedHandler}></input>
-            {/* <button onClick ={completedHandler}>done</button> */}
+            <input type = 'checkbox' onChange={completedHandler, handleIncrement}></input>
             <button onClick={deleteHandler}>delete</button>
         </div>
     )
 }
 
 export default TodoList
+
+{/* <button onClick ={completedHandler}>done</button> */}

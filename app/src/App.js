@@ -1,18 +1,17 @@
 import Form from './components/Form';
 import Todo from './components/Todo';
+import Counter from './components/Counter';
 import React, {useState, useEffect} from 'react'
 
 
+
 function App(){
-
-   
-
 
     const [input, setInput] = useState('');
     const [todo, setTodo] = useState([]);
     const [status, setStatus] = useState('all')
     const [filtodo, setFiltodo] = useState([]);
-    const [counter, setCounter] = useState(0);
+    const [count, setCount] = useState(0);
 
 useEffect(() =>{
     filterHandler();    
