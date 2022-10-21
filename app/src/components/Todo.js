@@ -3,7 +3,6 @@ import List from "./List";
 
 
 const TodoList = ({todo,setTodo,filtodo}) =>{
-    console.log(filtodo)
     return(
         <div>
             <ul key={todo.id}>

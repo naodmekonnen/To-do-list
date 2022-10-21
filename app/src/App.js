@@ -2,8 +2,6 @@ import Form from './components/Form';
 import Todo from './components/Todo';
 import React, {useState, useEffect} from 'react'
 
-
-
 function App(){
 
     const [input, setInput] = useState('');
@@ -12,7 +10,10 @@ function App(){
     const [filtodo, setFiltodo] = useState([]);
 
 useEffect(() =>{
-    filterHandler();    
+    filterHandler();  
+    saveLocal(); 
+    getLocal();
+
 },[todo, status])
 
 const filterHandler = () =>{
@@ -29,6 +30,20 @@ const filterHandler = () =>{
             break;
 
     }
+    }
+
+    const saveLocal = () =>{
+      localStorage.setItem('todo', JSON.stringify(todo))
+        
+    }
+    const getLocal = () => {
+        if(localStorage.getItem('todo') === null){
+            localStorage.setItem('todo', JSON.stringify([]))
+        }
+        else{
+            let localdata = localStorage.getItem('todo', JSON.stringify(todo))
+            setTodo(localdata)
+        }
     }
 
     return(
