@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Todo = ({ text, todo, todos, setTodos }) => {
+const List = ({ text, todo, todos, setTodos }) => {
     // Events
     const deleteHandler = () => {
         setTodos(todos.filter((el) => el.id !== todo.id));
@@ -29,4 +29,4 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     );
 }
 
-export default Todo;
+export default List;

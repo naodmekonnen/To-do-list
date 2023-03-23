@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-// Importing Components
 import Form from "./components/Form"
-import TodoList from "./components/Todo"
+import Todo from "./components/Todo"
+
+
 function App() {
 
   // State
@@ -68,11 +69,12 @@ function App() {
         setStatus={setStatus}
 
       />
-      <TodoList
+      <Todo
         todos={todos}
         setTodos={setTodos}
         filteredTodos={filteredTodos}
       />
+
     </div>
   );
 }
