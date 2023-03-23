@@ -1,40 +1,41 @@
-import React from "react";
+import React from 'react';
 
-
-const Form = ({input,setInput,todo,setTodo, setStatus}) =>{
-    const inputHandler = (e) => {
-        console.log(e.target.value)
-        setInput(e.target.value)
+const Form = ({todos, setTodos, inputText, setInputText, setStatus}) => {
+    // Input changes and call this function
+    const inputTextHandler = (e) => {
+        // console.log(e.target.value);
+        setInputText(e.target.value);
     }
-
-    const submitHandler = (e) => {
+    const submitTodoHandler = (e) => {
         e.preventDefault();
-        setTodo([...todo,
-            {text: input, 
-             completed:false, 
-             id: Date.now()}])
-
-        setInput('')
-    }
-
+        setTodos([
+            ...todos, 
+            {text: inputText, 
+                completed: false, 
+                id: Math.random() * 1000
+            }
+        ]);
+        setInputText("");
+    };
     const statusHandler = (e) => {
-        setStatus(e.target.value)
+        setStatus(e.target.value);
     }
-
-return(
-        <>
-        <input placeholder='Enter a task' value={input} onChange={inputHandler}type='text'></input>
-        <button onClick={submitHandler} type='submit'>submit</button>
-        <div>
-            <select onChange={statusHandler} name='todo'>
-                <option value ='all'>All</option>
-                <option value ='completed'>Completed</option>
-                <option value ='uncompleted'>Uncompleted</option>
-            </select>
-        </div>
-       
-        </>
+    return (
+        <form>
+            <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input"></input>
+            <button onClick={submitTodoHandler} className="todo-button">
+                <i className="fa fa-plus-square" aria-hidden="true"></i>
+            </button>
+            <div className="select">
+                <select onChange={statusHandler} name="todos" className="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </form>
     );
 }
 
-export default Form
+export default Form;
+
