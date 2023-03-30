@@ -1,4 +1,9 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const List = ({ text, todo, todos, setTodos }) => {
     // Events
@@ -19,12 +24,19 @@ const List = ({ text, todo, todos, setTodos }) => {
     return (
         <div className="todo">
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
-            <button onClick={completeHandler} className="complete-btn">
-                <i className="fas fa-check"></i>
-            </button>
-            <button onClick={deleteHandler} className="trash-btn">
-                <i className="fas fa-trash"></i>
-            </button>
+            <FontAwesomeIcon
+            className="complete-btn" 
+            icon={faCircleCheck}
+            onClick={completeHandler}
+            /> 
+           
+            <FontAwesomeIcon
+            className="trash-btn"  
+            icon={faTrashCan}  
+            onClick={deleteHandler} 
+            />
+                
+            
         </div>
     );
 }

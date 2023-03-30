@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Form = ({todos, setTodos, inputText, setInputText, setStatus}) => {
     // Input changes and call this function
@@ -23,9 +25,13 @@ const Form = ({todos, setTodos, inputText, setInputText, setStatus}) => {
     return (
         <form>
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input"></input>
-            <button onClick={submitTodoHandler} className="todo-button">
-                <i className="fa fa-plus-square" aria-hidden="true"></i>
-            </button>
+            <FontAwesomeIcon 
+            className="todo-button"
+            icon={faPlus} 
+            onClick={submitTodoHandler}  
+            />
+                
+           
             <div className="select">
                 <select onChange={statusHandler} name="todos" className="filter-todo">
                     <option value="all">All</option>
